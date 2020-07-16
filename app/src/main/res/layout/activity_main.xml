@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:text="nestde scroll demo" />
+
+    <com.keyidabj.nestedscrolldemo.NestedParent
+        android:id="@+id/nested_parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="@android:color/holo_green_light"
+                android:gravity="center"
+                android:text="banner">
+
+            </TextView>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp">
+
+                <TextView
+                    android:background="@android:color/holo_orange_light"
+                    android:id="@+id/tv_menu_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="menu1" />
+
+                <TextView
+                    android:id="@+id/tv_menu_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@android:color/holo_blue_light"
+                    android:gravity="center"
+                    android:text="menu2"
+                    android:visibility="gone">
+
+                </TextView>
+
+            </RelativeLayout>
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/viewpager"
+                android:layout_width="match_parent"
+                android:layout_height="800dp" />
+
+        </LinearLayout>
+
+    </com.keyidabj.nestedscrolldemo.NestedParent>
+
+</LinearLayout>
